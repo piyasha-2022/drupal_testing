@@ -1,0 +1,6 @@
+name: movies_details
+description: Module for content type Movies
+core_version_requirement: ^8 || ^9
+type: module
+dependencies: 
+  - node
