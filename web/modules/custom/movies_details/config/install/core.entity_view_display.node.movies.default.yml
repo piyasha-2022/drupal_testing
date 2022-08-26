@@ -1,0 +1,63 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movies.movies_budget
+    - field.field.node.movies.movies_image
+    - field.field.node.movies.movies_releasedate
+    # - field.field.node.movies.movies_title
+    - node.type.movies
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.movies.default
+targetEntityType: node
+bundle: movies
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  movies_budget:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  movies_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  movies_releasedate:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  # movies_title:
+  #   # type: text_default
+  #   # type: string_textfield
+  #   type: string
+  #   label: above
+  #   settings: {  }
+  #   third_party_settings: {  }
+  #   weight: 2
+  #   region: content
+hidden: {  }

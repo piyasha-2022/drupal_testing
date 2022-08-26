@@ -1,0 +1,20 @@
+# langcode: en
+# status: true
+# dependencies:
+#   module:
+#     - node
+#     - text
+# id: node.movies_title
+# field_name: movies_title
+# entity_type: node
+# type: string
+# # type: string_textfield
+# settings:
+#   display_summary: true
+# module: text
+# locked: false
+# cardinality: 1
+# translatable: true
+# indexes: {  }
+# persist_with_no_fields: true
+# custom_storage: false

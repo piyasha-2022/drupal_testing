@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+  enforced:
+    module:
+      - movies_details
+id: node.movies_releasedate
+field_name: movies_releasedate
+entity_type: node
+type: datetime
+settings:
+  display_summary: true
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

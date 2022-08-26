@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.movies_budget
+    - node.type.movies
+id: node.movies.movies_budget
+field_name: movies_budget
+entity_type: node
+bundle: movies
+label: 'Movie Budget'
+description: 'Budget for movies'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: integer

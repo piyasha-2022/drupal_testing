@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.movies_image
+    - node.type.movies
+id: node.movies.movies_image
+field_name: movies_image
+entity_type: node
+bundle: movies
+label: 'Movie image'
+description: 'Image for movies'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: image

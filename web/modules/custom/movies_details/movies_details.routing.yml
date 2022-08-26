@@ -1,0 +1,23 @@
+# movies_details_form.form:
+#  path: 'SimpleForm'
+#  defaults:
+#    _title: 'MovieBudget form'
+#    _form: '\Drupal\movies_details\Form\SimpleForm'
+#  requirements:
+#    _permission: 'access content'
+
+# movies_details.settings:
+#   path: '/admin/config/movies_details/settings'
+#   defaults:
+#     _form: '\Drupal\movies_details\Form\SimpleconfigForm'
+#     _title: 'Movie Budget Form'
+#   requirements:
+#     _permission: 'administer site configuration'
+
+movies_details.admin_settings:
+  path: '/admin/config/development/MovieBudgetConfig'
+  defaults:
+    _form: '\Drupal\movies_details\Form\ModuleConfigurationForm'
+    _title: 'Movie Budget Form'
+  requirements:
+    _permission: 'administer site configuration'

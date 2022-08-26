@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.movies_releasedate
+    - node.type.movies
+id: node.movies.movies_releasedate
+field_name: movies_releasedate
+entity_type: node
+bundle: movies
+label: 'Movie releasedate'
+description: 'Releasedate for movies'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: datetime
