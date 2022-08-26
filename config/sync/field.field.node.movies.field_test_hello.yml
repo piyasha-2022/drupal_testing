@@ -1,0 +1,21 @@
+uuid: a93a50f4-cde6-42c9-9a04-a40f8e95b146
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test_hello
+    - node.type.movies
+  module:
+    - text
+id: node.movies.field_test_hello
+field_name: field_test_hello
+entity_type: node
+bundle: movies
+label: 'test hello'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

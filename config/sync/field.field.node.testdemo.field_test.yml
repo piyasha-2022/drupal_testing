@@ -1,0 +1,19 @@
+uuid: 426f40a3-f366-412c-839d-4de6bc9b3a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_test
+    - node.type.testdemo
+id: node.testdemo.field_test
+field_name: field_test
+entity_type: node
+bundle: testdemo
+label: test
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

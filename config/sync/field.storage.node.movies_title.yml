@@ -1,0 +1,21 @@
+uuid: 8d94e09f-e01e-446b-a046-8d6f1fe63b1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+_core:
+  default_config_hash: 4ELljEptZNyeGK689AHOk-ZhA0HPku2ebE93t4gHm-s
+id: node.movies_title
+field_name: movies_title
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false
