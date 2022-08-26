@@ -1,0 +1,25 @@
+uuid: 714fd496-8b2a-4d0c-8a62-ab94ae32c6c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.movies_title
+    - node.type.movies
+  module:
+    - text
+_core:
+  default_config_hash: diPluT0rLpbBfKf1TjkmfbaWCHkEKX426vC6__5RjR4
+id: node.movies.movies_title
+field_name: movies_title
+entity_type: node
+bundle: movies
+label: 'Movie title'
+description: 'Title for movies'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

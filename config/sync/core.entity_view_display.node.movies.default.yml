@@ -1,0 +1,30 @@
+uuid: 70998d02-011c-4e1d-ac4d-38f8b9e20e7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.movies.field_test_hello
+    - field.field.node.movies.movies_title
+    - node.type.movies
+  module:
+    - text
+    - user
+id: node.movies.default
+targetEntityType: node
+bundle: movies
+mode: default
+content:
+  field_test_hello:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  movies_title: true
