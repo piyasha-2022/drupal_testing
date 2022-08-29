@@ -44,17 +44,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  # movies_title:
-  #   # type:  text_textarea_with_summary
-  #   type: string_textfield
-  #   weight: 7
-  #   region: content
-  #   settings:
-  #     rows: 9
-  #     summary_rows: 3
-  #     placeholder: ''
-  #     show_summary: false
-  #   third_party_settings: {  }
   path:
     type: path
     weight: 5
