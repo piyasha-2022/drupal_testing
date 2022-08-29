@@ -8,32 +8,6 @@ use Drupal\node\Entity\Node;
 /**
  * shows message while user visits every node
  */
-// function movies_details_preprocess_node__movies(&$variables) {
-//   $variables['#cache']['max-age'] = 0;
-// }
-// function movies_details_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
-//   $node = \Drupal::routeMatch()->getParameter('node');
-//   if ($node instanceof \Drupal\node\NodeInterface) {
-//     $renderer = \Drupal::service('renderer');
-//     $renderer->addCacheableDependency($build, $node->id());
-//     // dump($build);
-//     // \Drupal::service('cache.render')->invalidateAll();
-//     $nid = $node->id();
-//   }
-//   if((!empty($node))&&($node->hasField('movies_budget'))){
-//     $node = Node::load($nid);
-//     $movies_budget1= $node->get('movies_budget')->value;
-//     // var_dump($movies_budget1);
-//     $movies_budget2 = \Drupal::config('movies_details.admin_settings')->get('movies_budget');
-//     // var_dump($movies_budget2);
-  
-//     if($movies_budget1>$movies_budget2) {
-//       \Drupal::messenger()->addMessage("Movie is overBudget");
-//     } else{
-//       \Drupal::messenger()->addMessage("Movie is underbudget");
-//     }
-//   }
-// }
 function movies_details_preprocess_page(&$variables) {
   $node = \Drupal::routeMatch()->getParameter('node');
   if ($node instanceof \Drupal\node\NodeInterface) {
@@ -43,13 +17,10 @@ function movies_details_preprocess_page(&$variables) {
     $node = Node::load($nid);
     $movies_budget= $node->get('movies_budget')->value;
     $cofig_movies_budget = \Drupal::config('movies_details.admin_settings')->get('movies_budget');
-    // dump($movies_budget,$cofig_movies_budget);
     if(!empty($movies_budget)&&(!empty($cofig_movies_budget))){
       if($movies_budget>$cofig_movies_budget) {
-        // dump('over');
         \Drupal::messenger()->addMessage("Movie is overBudget");
       } else{
-        // dump('under');
         \Drupal::messenger()->addMessage("Movie is underbudget");
       }
     }

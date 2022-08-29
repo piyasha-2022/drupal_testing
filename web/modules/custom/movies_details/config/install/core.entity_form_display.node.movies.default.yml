@@ -5,7 +5,6 @@ dependencies:
     - field.field.node.movies.movies_budget
     - field.field.node.movies.movies_image
     - field.field.node.movies.movies_releasedate
-    # - field.field.node.movies.movies_title
     - image.style.thumbnail
     - node.type.movies
   module:

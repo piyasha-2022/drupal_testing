@@ -8,39 +8,33 @@ use Drupal\node\Entity\Node;
  * Implements node creation while module installation.
  */
 function movies_details_install() {
-    for($i=1;$i<=3;$i++) {
-      $node = Node::create(array(
-      'type' => 'movies',
-      'title' => 'Devdas'.$i,
-      'movies_budget' => '200000' * $i,
-      'langcode' => 'en',
-      'uid' => '1',
-      'status' => 1,
-      'field_fields' => array(),
-    ));
-    $node->save();
-    }
+  for($i=1;$i<=3;$i++) {
+    $node = Node::create(array(
+    'type' => 'movies',
+    'title' => 'Devdas'.$i,
+    'movies_budget' => '200000' * $i,
+    'langcode' => 'en',
+    'uid' => '1',
+    'status' => 1,
+    'field_fields' => array(),
+  ));
+  $node->save();
+  }
 }
 /**
  * Removes any information that the module sets
  */
 function movies_details_uninstall() {
-
-    // Delete all nodes of given content type.
-    $storage_handler = \Drupal::entityTypeManager()
-      ->getStorage('node');
-    $nodes = $storage_handler->loadByProperties(['type' => 'movies']);
-    $storage_handler->delete($nodes);
+  // Delete all nodes of given content type.
+  $storage_handler = \Drupal::entityTypeManager()
+    ->getStorage('node');
+  $nodes = $storage_handler->loadByProperties(['type' => 'movies']);
+  $storage_handler->delete($nodes);
   
-    // Delete content type.
-    $content_type = \Drupal::entityTypeManager()
-      ->getStorage('node_type')
-      ->load('movies');
-    $content_type->delete();
-
-    // //Delete active configuration
-    // \Drupal::configFactory()->getEditable('field.storage.node.movies_budget')->delete();
-    // \Drupal::configFactory()->getEditable('field.storage.node.movies_image')->delete();
-    // \Drupal::configFactory()->getEditable('field.storage.node.movies_releasedate')->delete();
-  }
+  // Delete content type.
+  $content_type = \Drupal::entityTypeManager()
+    ->getStorage('node_type')
+    ->load('movies');
+  $content_type->delete();
+}
 ?>

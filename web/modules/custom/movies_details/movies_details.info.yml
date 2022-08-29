@@ -5,3 +5,4 @@ type: module
 dependencies: 
   - node
 configure: movies_details.admin_settings
+version : 1.0
