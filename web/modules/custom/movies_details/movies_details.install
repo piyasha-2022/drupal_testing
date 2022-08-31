@@ -10,15 +10,15 @@ use Drupal\node\Entity\Node;
 function movies_details_install() {
   for($i=1;$i<=3;$i++) {
     $node = Node::create(array(
-    'type' => 'movies',
-    'title' => 'Devdas'.$i,
-    'movies_budget' => '200000' * $i,
-    'langcode' => 'en',
-    'uid' => '1',
-    'status' => 1,
-    'field_fields' => array(),
-  ));
-  $node->save();
+      'type' => 'movies',
+      'title' => 'Devdas'.$i,
+      'movies_budget' => '200000' * $i,
+      'langcode' => 'en',
+      'uid' => '1',
+      'status' => 1,
+      'field_fields' => array(),
+    ));
+    $node->save();
   }
 }
 /**

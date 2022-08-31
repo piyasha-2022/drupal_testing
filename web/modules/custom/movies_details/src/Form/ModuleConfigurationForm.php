@@ -31,13 +31,10 @@ class ModuleConfigurationForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $config = $this->config('movies_details.admin_settings');
-    // $config = \Drupal::service('config.factory')->getEditable('movies_details.admin_settings');
     $form['movies_budget'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Movie Budget'),
       '#default_value' => $config->get('movies_budget'),
-      // '#default_value' => (!isset($this))?$config->get('movies_budget'):'300000',
-
     ];
     return parent::buildForm($form, $form_state);
   }
